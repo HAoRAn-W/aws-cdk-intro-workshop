@@ -11,6 +11,9 @@ Create the file `lambda/hitcounter.js`:
 
 ```js
 const { DynamoDB, Lambda } = require('aws-sdk');
+// if you're using Node.js 18+, using these two modules instead
+// const { Lambda } = require("@aws-sdk/client-lambda");
+// const { DynamoDB } = require("@aws-sdk/client-dynamodb");
 
 exports.handler = async function(event) {
   console.log("request:", JSON.stringify(event, undefined, 2));
